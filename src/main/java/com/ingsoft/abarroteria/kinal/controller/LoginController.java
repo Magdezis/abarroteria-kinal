@@ -45,13 +45,14 @@ public class LoginController implements Initializable {
         // TODO
     } 
     
-    public void handleLogin(){
+    public void handleLogin()throws Exception{
        if(txtFieldEmail.getText().isEmpty() || txtFieldPassword.getText().isEmpty()){
          sceneManager.showAlertInfo("Hay campos sin llenar", "No puedes dejar espacios en blanco.", "Intenta de nuevo.", Alert.AlertType.INFORMATION);
        }else{ 
            try{
             LoginDTOResponse response =  authService.login(new LoginDTORequest(txtFieldEmail.getText(), txtFieldPassword.getText()));
             sceneManager.showAlertInfo("Bienvenido: " + response.getNombre(),"Es bueno verte: ","Inicio de sesión correcto.", Alert.AlertType.INFORMATION);
+            sceneManager.showDashboardView();
            }catch(RuntimeException e){
                sceneManager.showAlertInfo("Error al iniciar sesión.", "Verificar campos","No se ha podido iniciar sesión", Alert.AlertType.WARNING);
            }
