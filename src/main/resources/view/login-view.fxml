@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.com.ingsoft.abarroteria.kinal.controller.LoginController">
+    <stylesheets>
+        <URL value="@/main/resources/css/login-view.css" />
+    </stylesheets>
+   <children>
+      <GridPane alignment="CENTER" layoutX="-1.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.39996337890625" minWidth="10.0" prefWidth="61.599971771240234" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="435.9999877929687" minWidth="10.0" prefWidth="435.9999877929687" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.4000244140625" minWidth="10.0" prefWidth="53.20001220703125" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="400.40000000000003" minHeight="10.0" prefHeight="287.1999938964844" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Label layoutX="98.0" layoutY="167.0" text="correo eléctronico" />
+                  <Label layoutX="98.0" layoutY="232.0" text="Contraseña" />
+                  <Button fx:id="btnIniciarSesion" layoutX="104.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleLogin" text="Iniciar sesión" />
+                  <Button layoutX="218.0" layoutY="314.0" mnemonicParsing="false" text="Registrarse" />
+                  <TextField fx:id="txtFieldEmail" layoutX="98.0" layoutY="200.0" prefHeight="25.0" prefWidth="239.0" />
+                  <TextField fx:id="txtFieldPassword" layoutX="98.0" layoutY="257.0" prefHeight="25.0" prefWidth="239.0" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="117.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../colegio-gotitas/src/main/resources/images/png-002.png" />
+                     </image></ImageView>
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
